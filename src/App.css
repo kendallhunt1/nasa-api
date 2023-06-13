@@ -1,38 +1,161 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navWrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navWrapper h3 {
+  font-family: 'Oswald', sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navBarLeftWrapper, .navBarRight {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 100vh;
+  background: rgba(90, 88, 88, 0.459);
+  z-index: 100;
   color: white;
+  text-align: center;
+  overflow: hidden;
 }
 
-.App-link {
-  color: #61dafb;
+.navBarLeftWrapper {
+  width: 15%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.navBarLeft {
+  height: 35vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navBarLeft img {
+  width: 90%;
+}
+
+.navBarLeft h3 {
+  max-width: 80%;
+}
+
+.navBarRight {
+  width: 30%;
+  height: 100%;
+}
+
+.photoOfTheDay {
+  height: 100%;
+  width: 100%;
+}
+
+.rightSideNavBox {
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rightSideNavBox1 {
+  max-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75%;
+}
+
+#title {
+  max-width: 85%;
+}
+
+#description {
+  max-width: 75%;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  overflow: scroll;
+  height: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+
+  p {
+    font-size: 0.9rem;
   }
-  to {
-    transform: rotate(360deg);
+  .navWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    height: 100%;
   }
+
+  .navBarLeftWrapper {
+    height: 15vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navBarLeft {
+    width: 40%;
+    height: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .navBarLeft h3 {
+    max-width: 40%;
+    max-height: 90%;
+    font-size: 0.95rem;
+
+  }
+
+  .navBarLeft img {
+    width: 40%;
+  }
+
+  .navBarLeft, .navBarRight {
+    display: flex;
+  }
+
+  .navBarRight {
+    width: 100%;
+    height: 35vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .rightSideNavBox {
+    height: 20%;
+    width: 50%;
+    font-size: 1.1rem;
+  }
+
+  .rightSideNavBox1 {
+    height: 60%;
+    width: 80%;
+  }
+
+  #description {
+    font-size: 1rem;
+  }
+
 }
